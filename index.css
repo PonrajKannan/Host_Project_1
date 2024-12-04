@@ -1,0 +1,104 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-item1{
+  background-color: #1F1F1F;
+  color: #77d525bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: item1;
+  /* border: 1.5px dashed #77d525; */
+}
+
+.grid-item2{
+  background-color: #45741ce7;
+  display: flex;
+  flex-direction: column;
+  grid-area: item2;
+  padding: 5px;
+  /* border: 1.5px dashed #DB33DB; */
+}
+
+.grid-item2 a{
+  color: #CBE4DE;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px;
+  /* border: 1.5px dashed #33A5DB; */
+}
+
+.grid-item2 a:hover{
+  background-color: #1f1f1ff1;
+}
+
+.grid-item3{
+  background-color: #1f1f1ff1;
+  grid-area: item3;
+  padding: 20px;
+  /* border: 1.5px dashed #DB3333; */
+}
+
+.grid-item3 h2{
+  color: #77d525bd;
+  /* border: 1.5px dashed #33A5DB; */
+}
+
+.grid-item3 p{
+  color: #CBE4DE;
+  padding: 10px;
+  /* border: 1.5px dashed #BCDB33; */
+}
+
+.infor{
+  position: relative;
+  top: 10px;
+}
+
+.grid-item4{
+  grid-area: item4;
+  display: flex;
+  background-color: #1F1F1F;
+  color: #77d525bd;
+  align-items: end;
+  justify-content: center;
+  /* border: 1.5px dashed #77d525; */
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'item1 item1 item1 item1' 'item2 item3 item3 item3' 'item4 item4 item4 item4';
+  grid-template-rows: 100px auto 60px;
+  grid-template-columns: 200px auto auto auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-item1 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item2 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item3 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item4 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-container {
+    height: 100vh;
+    grid-template-areas: 'item1 item1 item1 item1' 'item2 item2 item2 item2' 'item3 item3 item3 item3' 'item4 item4 item4 item4';
+    grid-template-rows: 100px 120px auto 60px;
+  }
+  .grid-item3 h2{
+    text-align: center;
+  }
+}
